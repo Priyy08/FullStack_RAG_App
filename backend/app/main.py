@@ -26,7 +26,7 @@ app.add_middleware(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://full-stack-rag-app.vercel.app",https://pm-wasserstoff-ai-intern-task-5oqy-hxa11czsr-priyy08s-projects.vercel.app","https://pm-wasserstoff-ai-intern-task-5oqy.vercel.app"],
+    allow_origins=["https://full-stack-rag-prpj6a96b-priyy08s-projects.vercel.app",https://pm-wasserstoff-ai-intern-task-5oqy-hxa11czsr-priyy08s-projects.vercel.app","https://pm-wasserstoff-ai-intern-task-5oqy.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
