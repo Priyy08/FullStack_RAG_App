@@ -1,0 +1,19 @@
+# Ignore local env in backend
+/app/.env
+
+# Python cache and venv
+/app/__pycache__/
+/app/api/__pycache__/
+/app/core/__pycache__/
+/app/services/__pycache__/
+/data
+/qdrant_data
+
+
+*.py[cod]
+venv/
+.venv/
+env/
+*.egg-info/
+.pytest_cache/
+*.log

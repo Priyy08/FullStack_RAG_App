@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend/app
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - SESSION_SECRET_KEY=${SESSION_SECRET_KEY:-your-dev-secret-key} # Example: use .env file or export
+      - GROQ_API_KEY=${GROQ_API_KEY} # Must be provided
+      - HF_API_TOKEN=${HF_API_TOKEN} # Must be provided via .env or exported
+      - QDRANT_API_KEY=${QDRANT_API_KEY} # Optional, depending on Qdrant setup
+      - QDRANT_CLUSTER_URL=${QDRANT_CLUSTER_URL} # Optional, depending on Qdrant setup
+      - FRONTEND_ORIGINS=${FRONTEND_ORIGINS:-} # For CORS, defaults to empty if not in .env
+    volumes:
+      # Use volumes for development if live-reloading is needed,
+      # otherwise, code is baked into the image.
+      # - ./backend/app:/app/app # Example for development
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80" # Map host 3000 to container 80 (Nginx default)
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

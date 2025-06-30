@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+python-dotenv
+qdrant-client
+# sentence-transformers # Removed as embeddings are now via API
+groq
+pydantic
+python-multipart
+pytesseract
+Pillow
+PyMuPDF
+requests # Added for making HTTP requests to Hugging Face API
+itsdangerous 
+langchain
+huggingface-hub # Added for interacting with Hugging Face API/models
+numpy # Added for handling numpy.ndarray from Hugging Face client
+ 
