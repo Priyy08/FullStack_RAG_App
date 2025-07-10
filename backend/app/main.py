@@ -5,7 +5,7 @@ from app.api import endpoints
 import os # Re-added os import for environment variables
 # from app.config import UPLOAD_DIR # UPLOAD_DIR is no longer used
 
-app = FastAPI(title="Wasserstoff AI Intern Task")
+app = FastAPI(title="RAG Backend API")
 
 # Create upload directory if it doesn't exist - REMOVED as UPLOAD_DIR is no longer used
 # os.makedirs(UPLOAD_DIR, exist_ok=True)
