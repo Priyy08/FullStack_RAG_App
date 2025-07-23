@@ -2,6 +2,9 @@
 
 An advanced RAG (Retrieval Augmented Generation) application that can extract answers from an uploaded knowledge base. It uses Groq LLM API, Qdrant vector database (in-memory for sessions), FastAPI backend, and a React+Vite frontend.
 
+## Live Application Link(Try it out!) : https://full-stack-rag-prpj6a96b-priyy08s-projects.vercel.app/
+
+
 ## Features (after recent updates)
 
 -   **In-Memory Document Handling**: Uploaded documents (up to 75 per session) are processed and stored in memory for the duration of the user's session.
