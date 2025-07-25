@@ -4,6 +4,8 @@ An advanced RAG (Retrieval Augmented Generation) application that can extract an
 
 ## Live Application Link(Try it out!) : https://full-stack-rag-prpj6a96b-priyy08s-projects.vercel.app/
 
+Note: If you are using this application then wait for some time to upload the document as the backend is deployed on free version of render so it will take some time to restart itself due to inactivity when you hit the upload button, after successful upload and ingestion you will receive an success message after that you can query from that document easily.
+
 
 ## Features (after recent updates)
 
